@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | A. Yanai Industries</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- GLOBAL STYLES --- */
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #e67e22;
+            --light-bg: #f8f9fa;
+            --dark-bg: #343a40;
+            --text-color: #333;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Roboto', sans-serif; line-height: 1.6; color: var(--text-color); }
+
+        /* Header */
+        header { background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: fixed; width: 100%; top: 0; z-index: 1000; }
+        .container { width: 90%; max-width: 1200px; margin: auto; padding: 0 20px; }
+        nav { display: flex; justify-content: space-between; align-items: center; height: 80px; }
+        .logo { font-size: 1.5rem; font-weight: 700; color: var(--primary-color); text-decoration: none; display: flex; flex-direction: column; }
+        .logo span.hebrew { font-size: 0.9rem; color: #666; }
+        .nav-links { display: flex; list-style: none; }
+        .nav-links li { margin-left: 20px; }
+        .nav-links a { text-decoration: none; color: var(--primary-color); font-weight: 500; transition: 0.3s; }
+        .nav-links a:hover, .nav-links a.active { color: var(--secondary-color); }
+
+        /* --- CONTACT PAGE STYLES --- */
+        
+        .page-hero {
+            background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.9)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 40vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            margin-top: 80px;
+        }
+        
+        .page-hero h1 { font-size: 3rem; margin-bottom: 10px; }
+
+        .contact-wrapper {
+            padding: 80px 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        /* Info Side */
+        .info-box { margin-bottom: 30px; }
+        .info-box h3 { color: var(--primary-color); font-size: 1.4rem; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
+        .info-box i { color: var(--secondary-color); }
+        .info-box p { font-size: 1.1rem; color: #555; }
+
+        /* Map */
+        .map-container {
+            width: 100%;
+            height: 300px;
+            background: #eee;
+            margin-top: 30px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .map-container iframe { width: 100%; height: 100%; border: 0; }
+
+        /* Form Side */
+        .contact-form {
+            background: var(--light-bg);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .contact-form h2 { margin-bottom: 20px; color: var(--primary-color); }
+
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 5px; font-weight: 500; }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: inherit;
+        }
+        
+        .form-group textarea { resize: vertical; height: 150px; }
+
+        .btn-submit {
+            background: var(--secondary-color);
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            font-weight: bold;
+            width: 100%;
+            transition: 0.3s;
+        }
+
+        .btn-submit:hover { background: #d35400; }
+
+        /* Footer */
+        footer { background: #222; color: #aaa; text-align: center; padding: 20px 0; font-size: 0.9rem; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .contact-wrapper { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    A. Yanai Industries
+                    <span class="hebrew">תעשיות א.ינאי בע"מ</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="catalog.html">Catalog</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>We are here to help with any project</p>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="contact-wrapper">
+            
+            <div class="contact-info-side">
+                <div class="info-box">
+                    <h3><i class="fas fa-phone-alt"></i> Call Us</h3>
+                    <p>050-1234567</p>
+                    <p>03-9876543</p>
+                </div>
+
+                <div class="info-box">
+                    <h3><i class="fas fa-envelope"></i> Email Us</h3>
+                    <p>info@ayanai.co.il</p>
+                    <p>sales@ayanai.co.il</p>
+                </div>
+
+                <div class="info-box">
+                    <h3><i class="fas fa-map-marker-alt"></i> Visit Us</h3>
+                    <p>Industrial Zone, Israel</p>
+                    <p>Opening Hours: Sun-Thu 07:00 - 17:00</p>
+                </div>
+
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d108502.93608670868!2d34.75069925!3d31.9023467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1502b42825d10523%3A0x62837373f7461461!2sRishon%20LeTsiyon!5e0!3m2!1sen!2sil!4v1714478345212!5m2!1sen!2sil" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+
+            <div class="contact-form-side">
+                <form class="contact-form">
+                    <h2>Send a Message</h2>
+                    
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" placeholder="Your Name">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" placeholder="Your Email">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="tel" placeholder="Your Phone">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Message / Request</label>
+                        <textarea placeholder="Tell us about your project..."></textarea>
+                    </div>
+
+                    <button type="button" class="btn-submit" onclick="alert('Thank you! We will contact you soon.')">Send Message</button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 A. Yanai Industries Ltd. (תעשיות א.ינאי בע"מ). All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
